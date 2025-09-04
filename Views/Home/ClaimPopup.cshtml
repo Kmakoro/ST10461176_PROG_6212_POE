@@ -3,7 +3,7 @@
 }
 
 <!--include menu script layout in shared folder _menbu.cshtml-->
-@Html.Partial("_MenuBar")
+
 
 <body>
 
@@ -17,66 +17,41 @@
                 <div class="user-details">
                     <!-- Input for Full Name -->
                     <div class="input-box">
-                        <span class="details">Amount</span>
+                        <span class="details">Hours Worked</span>
                         <input type="text" placeholder="Enter Amount">
                     </div>
                     <!-- Input for Username -->
                     <div class="input-box">
-                        <span class="details">Username</span>
-                        <input type="text" placeholder="Enter your username">
+                        <span class="details">Rate </span>
+                        <input type="text" placeholder="Calculated Amount">
                     </div>
                     <!-- Input for Email -->
                     <div class="input-box">
-                        <span class="details">Email</span>
-                        <input type="text" placeholder="Enter your email">
+                        <span class="details">Date Start</span>
+                        <input type="date" />
+                        
                     </div>
                     <!-- Input for Phone Number -->
                     <div class="input-box">
-                        <span class="details">Phone Number</span>
-                        <input type="text" placeholder="Enter your number">
+                        <span class="details">Date End</span>
+                        <input type="date" />
+                        
                     </div>
                     <!-- Input for Password -->
                     <div class="input-box">
-                        <span class="details">Password</span>
-                        <input type="text" placeholder="Enter your password">
+                        <span class="details">25% Tax Payable</span>
+                        <input type="text" placeholder="R15 000">
                     </div>
-                    <!-- Input for Confirm Password -->
-                    <div class="input-box">
-                        <span class="details">Confirm Password</span>
-                        <input type="text" placeholder="Confirm your password">
-                    </div>
+                    
                 </div>
-                <div class="Role-details">
-                    <!-- Radio buttons for gender selection -->
-                    <input type="radio" name="Role" id="dot-1">
-                    <input type="radio" name="Role" id="dot-2">
-                    <input type="radio" name="Role" id="dot-3">
-                    <span class="Role-title">Role</span>
-                    <div class="category">
-                        <!-- Label for Male -->
-                        <label for="dot-1">
-                            <span class="dot one"></span>
-                            <span class="Role">Lecturer</span>
-                        </label>
-                        <!-- Label for Female -->
-                        <label for="dot-2">
-                            <span class="dot two"></span>
-                            <span class="Role">ProgramCoordinator</span>
-                        </label>
-                        <!-- Label for Prefer not to say -->
-                        <label for="dot-3">
-                            <span class="dot three"></span>
-                            <span class="Role">Academic Manager</span>
-                        </label>
-                    </div>
-                </div>
+               
                 <!-- Submit button -->
                 <div class="button">
-                    <input id="submitBtn" type="button" value="Register" />
+                    <input id="submitBtn" type="button" value="SubmitClaim" />
                     <script>
                         document.getElementById("submitBtn").addEventListener("click", myFunction);
                         function myFunction() {
-                          window.location.href="@Url.Action("Index", "Home")";
+                          window.location.href="@Url.Action("LecturerPage", "MenuBar")";
                         }
                     </script>
                 </div>

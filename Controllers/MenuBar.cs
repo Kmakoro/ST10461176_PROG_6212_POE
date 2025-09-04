@@ -20,5 +20,9 @@ namespace ST10461176_PROG_6212_POE.Controllers
         {
             return View("~/Views/Home/AcademicManagerPage.cshtml");
         }
+        public IActionResult ClaimPopup()
+        {
+            return View("~/Views/Home/ClaimPopup.cshtml");
+        }
     }
 }
