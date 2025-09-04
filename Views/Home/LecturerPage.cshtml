@@ -14,14 +14,45 @@ align-content: center;
  display: flex;
 background : white;">
 
-    
-
     <ul class="nav-links" style="background : lawngreen" >
         <li><a href="@Url.Action("Index","MenuBar")">Create Claim</a></li>
     </ul>
-
-    
-
-
-
 </div>
+
+<link rel="stylesheet stylesheet" href="~/css/TableStyle.css" />
+<table class="actions-table" id="myActionsTable">
+    <thead>
+        <tr>
+            <th scope="col">Claim ID</th>
+            <th scope="col">Date of Claim</th>
+            <th scope="col">Claim Amount</th>
+            <th scope="col">Document</th>
+            <th scope="col">Claim Status</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Add a data-id to each row to identify the item -->
+        <tr data-id="post-101">
+            <td>Claim 001</td>
+            <td>2019-03-16</td>
+            <td>R60 000</td>
+			<td>Document.pdf</td>
+			<td>Pending</td>
+        </tr>
+        <tr data-id="post-102">
+            <td>Claim 002</td>
+            <td>2019-04-18</td>
+            <td>R25 000</td>
+            <td>Document.pdf</td>
+            <td>Pre Approved</td>
+        </tr>
+        <tr data-id="post-103">
+            <td>Claim 003</td>
+            <td>2019-06-15</td>
+            <td>R98 000</td>
+            <td>Document.pdf</td>
+            <td>Approved</td>
+        </tr>
+    </tbody>
+</table>
