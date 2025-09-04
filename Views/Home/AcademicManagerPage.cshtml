@@ -7,4 +7,164 @@
 <br />
 
 
-<h1>Academic Manager Page </h1>
+<style>
+    .actions-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+        .actions-table thead th {
+            padding: 12px;
+            background-color: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
+            text-align: left;
+        }
+
+        .actions-table tbody td {
+            padding: 12px;
+            border-bottom: 1px solid #e9ecef;
+            vertical-align: middle;
+        }
+    /* -- Actions Cell & Buttons Styling -- */
+    .cell-actions {
+        text-align: right;
+    }
+
+    .actions-container {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px; /* Space between buttons */
+    }
+
+    .action-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 50%; /* Make them circular */
+        cursor: pointer;
+        transition: background-color 0.2s, box-shadow 0.2s;
+    }
+
+        .action-button:hover {
+            background-color: #f5f5f5;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .action-button svg {
+            width: 16px;
+            height: 16px;
+        }
+    /* Specific colors for edit/delete */
+    .btn-edit {
+        color: #3498db;
+    }
+
+    .btn-delete {
+        color: #e74c3c;
+    }
+
+    .btn-edit:hover {
+        border-color: #3498db;
+    }
+
+    .btn-delete:hover {
+        border-color: #e74c3c;
+    }
+
+</style>
+
+<table class="actions-table" id="myActionsTable">
+    <thead>
+        <tr>
+            <th scope="col">Page Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Date Published</th>
+            <th scope="col" class="cell-actions">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Add a data-id to each row to identify the item -->
+        <tr data-id="post-101">
+            <td>Getting Started with CSS</td>
+            <td>Admin</td>
+            <td>2019-08-15</td>
+            <td class="cell-actions">
+                <div class="actions-container">
+                    <button class="action-button btn-edit" title="Edit">
+                        <!-- Edit Icon (Pencil) -->
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg>
+                    </button>
+                    <button class="action-button btn-delete" title="Delete">
+                        <!-- Delete Icon (Trash Can) -->
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"></path></svg>
+                    </button>
+                </div>
+            </td>
+        </tr>
+        <tr data-id="post-102">
+            <td>The Power of Flexbox</td>
+            <td>Peter Griffin</td>
+            <td>2023-07-12</td>
+            <td class="cell-actions">
+                <div class="actions-container">
+                    <button class="action-button btn-edit" title="Edit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg></button>
+                    <button class="action-button btn-delete" title="Delete"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"></path></svg></button>
+                </div>
+            </td>
+        </tr>
+        <tr data-id="post-103">
+            <td>Understanding JavaScript Promises</td>
+            <td>Admin</td>
+            <td>2025-05-10</td>
+            <td class="cell-actions">
+                <div class="actions-container">
+                    <button class="action-button btn-edit" title="Edit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg></button>
+                    <button class="action-button btn-delete" title="Delete"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"></path></svg></button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    /**
+     * Enables action button functionality for a table using event delegation.
+     * param {string} tableId The ID of the table.
+     */
+    function enableActionButtons(tableId) {
+        const table = document.getElementById(tableId);
+        if (!table) return;
+
+        // Add a single event listener to the whole table body
+        table.querySelector('tbody').addEventListener('click', function(e) {
+            // Find the button that was clicked using closest()
+            const actionButton = e.target.closest('.action-button');
+
+            if (actionButton) {
+                const row = actionButton.closest('tr');
+                const rowId = row.getAttribute('data-id');
+
+                // Check which action was clicked
+                if (actionButton.classList.contains('btn-edit')) {
+                    // *** REPLACE THIS with your edit logic ***
+                    alert(`Edit action triggered for item: ${rowId}`);
+                } else if (actionButton.classList.contains('btn-delete')) {
+                    // *** REPLACE THIS with your delete logic ***
+                    if (confirm(`Are you sure you want to delete item: ${rowId}?`)) {
+                        alert(`Deleting item: ${rowId}`);
+                        // In a real app, you would make an API call and then remove the row:
+                        // row.remove();
+                    }
+                }
+            }
+        });
+    }
+
+    // Initialize the functionality
+    enableActionButtons('myActionsTable');
+</script>
