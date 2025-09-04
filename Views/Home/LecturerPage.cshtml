@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "LecturerPage";
+}
+
+<!--include menu script layout in shared folder _menbu.cshtml-->
+@Html.Partial("_MenuBar")
+
+
+
+<div 
+    id="Claim"
+    style="justify-content: center;
+align-content: center;
+ display: flex;
+background : white;">
+
+    
+
+    <ul class="nav-links" style="background : lawngreen" >
+        <li><a href="@Url.Action("Index","MenuBar")">Create Claim</a></li>
+    </ul>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ClaimPopup">
+        Open Form
+    </button>
+</div>
+
+
+</div>
