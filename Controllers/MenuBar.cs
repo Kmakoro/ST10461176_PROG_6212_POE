@@ -8,11 +8,28 @@ namespace ST10461176_PROG_6212_POE.Controllers
         {
             return View("~/Views/Home/Index.cshtml");
         }
-        public IActionResult LecturerPage()
+        public IActionResult LecturerPage(string role)
         {
-            return View("~/Views/Home/LecturerPage.cshtml");
+            ViewBag.role = role;
+            if (role == "lecturer")
+            {
+                return View("~/Views/Home/LecturerPage.cshtml");
+            }
+            else if (role == "PC")
+            {
+                return View("~/Views/Home/ProgramCoordinatorPage.cshtml");
+            }
+            else if (role == "AM")
+            {
+                return View("~/Views/Home/AcademicManagerPage.cshtml");
+            }
+            else
+            {
+                return View("~/Views/Home/Index.cshtml");
+            }
+            
         }
-        public IActionResult ProgramCoordinatorPage()
+        public IActionResult ProgramCoordinatorPage(string role)
         {
             return View("~/Views/Home/ProgramCoordinatorPage.cshtml");
         }

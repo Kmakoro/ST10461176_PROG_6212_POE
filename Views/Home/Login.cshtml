@@ -1,50 +1,36 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
 <body>
+
 
     <link rel="stylesheet" href="~/css/index.css" />
     <div class="container">
         <!-- Title section -->
-        <div class="title">Registration</div>
+        <div class="title">Login</div>
         <div class="content">
-            <!-- Registration form -->
-            <form action="#">
+            <!-- Login form -->
+            <form>
                 <div class="user-details">
-                    <!-- Input for Full Name -->
-                    <div class="input-box">
-                        <span class="details">Full Name</span>
-                        <input type="text" placeholder="Enter your name">
-                    </div>
                     <!-- Input for Username -->
                     <div class="input-box">
                         <span class="details">Username</span>
                         <input type="text" placeholder="Enter your username">
-                    </div>
-                    <!-- Input for Email -->
-                    <div class="input-box">
-                        <span class="details">Email</span>
-                        <input type="text" placeholder="Enter your email">
-                    </div>
-                    <!-- Input for Phone Number -->
-                    <div class="input-box">
-                        <span class="details">Phone Number</span>
-                        <input type="text" placeholder="Enter your number">
                     </div>
                     <!-- Input for Password -->
                     <div class="input-box">
                         <span class="details">Password</span>
                         <input type="text" placeholder="Enter your password">
                     </div>
-                    <!-- Input for Confirm Password -->
-                    <div class="input-box">
-                        <span class="details">Confirm Password</span>
-                        <input type="text" placeholder="Confirm your password">
-                    </div>
+
                 </div>
                 <div class="Role-details">
                     <!-- Radio buttons for gender selection -->
-                    <input type="radio" name="Role" id="dot-1">
-                    <input type="radio" name="Role" id="dot-2">
-                    <input type="radio" name="Role" id="dot-3">
+                    <input type="radio" name="Role" id="dot-1" value="Lecturer">
+                    <input type="radio" name="Role" id="dot-2" value="ProgramCoordinator">
+                    <input type="radio" name="Role" id="dot-3" value="Academic Manager">
                     <span class="Role-title">Role</span>
                     <div class="category">
                         <!-- Label for Male -->
@@ -66,17 +52,20 @@
                 </div>
                 <!-- Submit button -->
                 <div class="button">
-                    <input id="submitBtn" type="button" value="Register" />
+
+                    <input id="submitBtn" type="button" value="Login" />
+                    
                     <script>
                         document.getElementById("submitBtn").addEventListener("click", myFunction);
                         function myFunction() {
-                          window.location.href="@Url.Action("Index", "Home")";
+                        
+                          window.location.href="@Url.Action("LecturerPage", "MenuBar", new { role = "lecturer" })";
                         }
                     </script>
+
                 </div>
-                <a href="@Url.Action("Index","Home")">Already a User? Click here to Login</a>
+                <a href="@Url.Action("RegistrationPage","Home")">New User? Click here to SignUp</a>
             </form>
         </div>
     </div>
 </body>
-

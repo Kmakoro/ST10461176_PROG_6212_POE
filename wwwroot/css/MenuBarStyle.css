@@ -7,6 +7,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+divTitle {
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
 divMenu {
     height: auto;
     display: flex;
