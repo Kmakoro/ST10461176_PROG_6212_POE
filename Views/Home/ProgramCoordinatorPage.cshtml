@@ -12,10 +12,12 @@
 <table class="actions-table" id="myActionsTable">
     <thead>
         <tr>
-            <th scope="col">Claim ID</th>
-            <th scope="col">Date of Claim</th>
+            <th scope="col">User ID</th>
+            <th scope="col">Ref No.</th>
+            <th scope="col">Date Submitted.</th>
             <th scope="col">Claim Amount</th>
-            <th scope="col">Document</th>
+            <th scope="col">Documents</th>
+            <th scope="col">View Document</th>
             <th scope="col">Claim Status</th>
             <th scope="col" class="cell-actions">Actions</th>
         </tr>
@@ -23,47 +25,82 @@
     <tbody>
         <!-- Add a data-id to each row to identify the item -->
         <tr data-id="post-101">
-            <td>Claim 001</td>
+            <td>Lecturer one</td>
+            <td>Ref 001</td>
             <td>2019-03-16</td>
             <td>R60 000</td>
             <td>Document.pdf</td>
+            <td class="cell-actions">
+                <a href="Document.pdf" download>Download</a>
+            </td>
             <td>Pending</td>
             <td class="cell-actions">
                 <div class="actions-container">
-                    <button class="action-button btn-edit" title="Edit">
-                        <!-- Edit Icon (Pencil) -->
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg>
+                    <button class="action-button btn-approve" title="Pre-Approve">
+                        <!-- Approve Icon (Approve) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="green">
+                            <path d="M9 16.2l-3.5-3.5-1.4 1.4L9 19 20.3 7.7l-1.4-1.4z" />
+                        </svg>
                     </button>
-                    <button class="action-button btn-delete" title="Delete">
-                        <!-- Delete Icon (Trash Can) -->
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"></path></svg>
+                    <button class="action-button btn-decline" title="Decline">
+                        <!-- Decline Icon (Decline) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="red">
+                            <rect width="24" height="24" fill="none" />
+                            <path d="M18.3 5.7a1 1 0 0 0-1.4 0L12 10.6 7.1 5.7a1 1 0 0 0-1.4 1.4l4.9 4.9-4.9 4.9a1 1 0 1 0 1.4 1.4l4.9-4.9 4.9 4.9a1 1 0 0 0 1.4-1.4l-4.9-4.9 4.9-4.9a1 1 0 0 0 0-1.4z" />
+                        </svg>
                     </button>
                 </div>
             </td>
         </tr>
         <tr data-id="post-102">
-            <td>Claim 002</td>
+            <td>Lecturer two</td>
+            <td>Ref 201</td>
             <td>2019-04-18</td>
             <td>R25 000</td>
             <td>Document.pdf</td>
+            <td class="cell-actions">
+                <a href="Document.pdf" download>Download</a>
+            </td>
             <td>Pre Approved</td>
             <td class="cell-actions">
                 <div class="actions-container">
-                    <button class="action-button btn-edit" title="Edit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg></button>
-                    <button class="action-button btn-delete" title="Delete"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"></path></svg></button>
+                    <button class="action-button btn-approve" title="Pre-Approve">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="green">
+                            <path d="M9 16.2l-3.5-3.5-1.4 1.4L9 19 20.3 7.7l-1.4-1.4z" />
+                        </svg>
+                    </button>
+                    <button class="action-button btn-decline" title="Decline">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="red">
+                            <rect width="24" height="24" fill="none" />
+                            <path d="M18.3 5.7a1 1 0 0 0-1.4 0L12 10.6 7.1 5.7a1 1 0 0 0-1.4 1.4l4.9 4.9-4.9 4.9a1 1 0 1 0 1.4 1.4l4.9-4.9 4.9 4.9a1 1 0 0 0 1.4-1.4l-4.9-4.9 4.9-4.9a1 1 0 0 0 0-1.4z" />
+                        </svg>
+                    </button>
                 </div>
             </td>
         </tr>
         <tr data-id="post-103">
-            <td>Claim 003</td>
+            <td>Lecturer three</td>
+            <td>Ref 301</td>
             <td>2019-06-15</td>
             <td>R98 000</td>
             <td>Document.pdf</td>
+            <td class="cell-actions">
+                <a href="Document.pdf" download>Download</a>
+            </td>
             <td>Approved</td>
             <td class="cell-actions">
                 <div class="actions-container">
-                    <button class="action-button btn-edit" title="Edit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg></button>
-                    <button class="action-button btn-delete" title="Delete"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"></path></svg></button>
+                    <button class="action-button btn-approve" title="Pre-Approve">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="green">
+                            <path d="M9 16.2l-3.5-3.5-1.4 1.4L9 19 20.3 7.7l-1.4-1.4z" />
+                        </svg>
+                    </button>
+                    <button class="action-button btn-decline" title="Decline">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="red">
+                            <rect width="24" height="24" fill="none" />
+                            <path d="M18.3 5.7a1 1 0 0 0-1.4 0L12 10.6 7.1 5.7a1 1 0 0 0-1.4 1.4l4.9 4.9-4.9 4.9a1 1 0 1 0 1.4 1.4l4.9-4.9 4.9 4.9a1 1 0 0 0 1.4-1.4l-4.9-4.9 4.9-4.9a1 1 0 0 0 0-1.4z" />
+                        </svg>
+                    </button>
                 </div>
             </td>
         </tr>
@@ -89,13 +126,13 @@
                 const rowId = row.getAttribute('data-id');
 
                 // Check which action was clicked
-                if (actionButton.classList.contains('btn-edit')) {
+                if (actionButton.classList.contains('btn-approve')) {
                     // *** REPLACE THIS with your edit logic ***
-                    alert(`Edit action triggered for item: ${rowId}`);
-                } else if (actionButton.classList.contains('btn-delete')) {
+                    alert(`Pre-Approve action triggered for item: ${rowId}`);
+                } else if (actionButton.classList.contains('btn-decline')) {
                     // *** REPLACE THIS with your delete logic ***
-                    if (confirm(`Are you sure you want to delete item: ${rowId}?`)) {
-                        alert(`Deleting item: ${rowId}`);
+                    if (confirm(`Are you sure you want to Decline item: ${rowId}?`)) {
+                        alert(`Declinig item: ${rowId}`);
                         // In a real app, you would make an API call and then remove the row:
                         // row.remove();
                     }

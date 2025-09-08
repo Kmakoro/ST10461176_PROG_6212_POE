@@ -1,6 +1,47 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<body>
+	<link rel="stylesheet" href="~/css/index.css" />
+	
+	
+	<div class="container">
+		<div style=" height: auto;
+	 display: flex;
+	 align-items: flex-start;
+	 justify-content: center;">
+			<h1 class="tile">Welcome to the Contract Management Claims System</h1>
+		</div>
+		
+		<div class="content">
+			<p>
+				We are pleased to welcome you to our secure online system for managing your monthly contract claims. This portal is designed to make the submission and tracking process efficient, transparent, and straightforward.
 
+				To get started, please:
 
-<a href="@Url.Action("Login","Home")">Login</a>
+				<a href="@Url.Action("Login","Home")">Log in</a> to your account using your credentials to access your personalized dashboard.
+
+				If you are a new user, please <a href="@Url.Action("RegistrationPage","Home")">register</a> for an account to begin.
+			</p>
+			<p>
+				Within your portal, you can:
+
+				✅ Submit new monthly claims electronically
+
+				📊 Track the status of submitted claims in real-time
+
+				📁 Upload your Documents
+
+				We are committed to processing your claims promptly and accurately. For assistance, please visit contact our support team at st10461176@rcconnect.edu.za.
+
+				Thank you for partnering with us.
+			</p>
+
+			<p>
+
+				[<a href="@Url.Action("Login","Home")">Log In</a>] | [<a href="@Url.Action("RegistrationPage","Home")">Register</a>]
+			</p>
+		</div>
+		
+	</div>
+</body>

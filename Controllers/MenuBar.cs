@@ -25,7 +25,7 @@ namespace ST10461176_PROG_6212_POE.Controllers
             }
             else
             {
-                return View("~/Views/Home/Index.cshtml");
+                return View("~/Views/Home/LecturerPage.cshtml");
             }
             
         }

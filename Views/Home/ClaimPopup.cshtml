@@ -37,13 +37,17 @@
                         <input type="date" />
                         
                     </div>
-                    <!-- Input for Password -->
+                    <!-- Input for Tax Payable -->
                     <div class="input-box">
-                        <span class="details">25% Tax Payable</span>
-                        <input type="text" placeholder="R15 000">
+                        <span class="details">Total Payable</span>
+                        <input type="text" placeholder="R" readonly>
                     </div>
                     
+                    
                 </div>
+                <h1>Upload Your File</h1>
+                <input type="file" id="myFile" name="filename">
+                
                
                 <!-- Submit button -->
                 <div class="button">
@@ -51,7 +55,7 @@
                     <script>
                         document.getElementById("submitBtn").addEventListener("click", myFunction);
                         function myFunction() {
-                          window.location.href="@Url.Action("LecturerPage", "MenuBar")";
+                          window.location.href="@Url.Action("LecturerPage", "MenuBar", new{role = "lecturer"})";
                         }
                     </script>
                 </div>
