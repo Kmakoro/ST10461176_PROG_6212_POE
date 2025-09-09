@@ -18,7 +18,7 @@ Real-Time Dashboard: Each user gets a personalized overview of relevant claims a
 Transparent Tracking: Lecturers can see the entire progress of their claim through every stage of the workflow.
 
 🛠️ Technology Stack
-Frontend: React.js (or Vue.js/Angular) - For building the dynamic SPA.
+Frontend: HTML, CSS, JavaScript with React.js (or Angular, Vue.js) - SPA framework for a dynamic user interface.
 
 Backend: Node.js with Express.js (or Django, Spring Boot) - MVC framework providing RESTful APIs.
 
@@ -27,36 +27,14 @@ Database: MongoDB (or PostgreSQL) - For flexible and scalable data storage.
 Authentication: JWT (JSON Web Tokens) - For secure user sessions.
 
 
-🚦 Getting Started
-Prerequisites
-Node.js (v16 or higher)
-
-npm or yarn
-
-MongoDB Atlas or a local MongoDB instance
-
 Installation
 Clone the repository:
 
 bash
-git clone https://github.com/your-username/contract-management-system.git
+git clone https://github.com/Kmakoro/ST10461176_PROG_6212_POE.git
 cd contract-management-system
 Set up the Backend (API Server):
 
-bash
-cd backend
-npm install
-# Create a .env file based on .env.example and add your database URI and JWT secret
-npm run dev
-The API server will start on http://localhost:5000.
-
-Set up the Frontend (Client):
-
-bash
-cd ../frontend
-npm install
-npm start
-The client will start on http://localhost:3000.
 
 👥 Default User Roles for Testing
 The system seeds the database with sample users:
@@ -66,16 +44,8 @@ Lecturer: Email: lecturer@email.com | Password: password
 Program Coordinator: Email: coordinator@email.com | Password: password
 
 Academic Manager: Email: manager@email.com | Password: password
+Feel free to log in with these credentials to explore the application.
 
-🧪 Testing
-To run the test suites for both frontend and backend:
-
-bash
-# Run backend tests (from /backend directory)
-npm test
-
-# Run frontend tests (from /frontend directory)
-npm test
 📄 License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
