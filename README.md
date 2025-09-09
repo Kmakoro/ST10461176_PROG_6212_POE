@@ -26,23 +26,7 @@ Database: MongoDB (or PostgreSQL) - For flexible and scalable data storage.
 
 Authentication: JWT (JSON Web Tokens) - For secure user sessions.
 
-📁 Project Structure
-text
-contract-management-system/
-├── backend/                 # MVC Server Application
-│   ├── models/             # Data models (User, Claim)
-│   ├── controllers/        # Request handlers & business logic
-│   ├── routes/             # API endpoint definitions
-│   ├── middleware/         # Auth & validation functions
-│   └── config/             # Database & app configuration
-└── frontend/               # Client SPA
-    ├── public/             # Static files
-    ├── src/
-    │   ├── components/     # Reusable UI components
-    │   ├── views/          # Main pages (Dashboard, Forms)
-    │   ├── services/       # Modules for API communication
-    │   └── styles/         # CSS/SCSS files
-    └── package.json
+
 🚦 Getting Started
 Prerequisites
 Node.js (v16 or higher)
